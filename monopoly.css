@@ -17,9 +17,9 @@ body{
 }
 
 .token{
-    border: 3px solid black;
-    width: 40px;
-    height: 40px;
+    border: 1px solid black;
+    width: 4vh;
+    height: 4vh;
     background-color: #b1ef1f;
     display: flex; /* 讓中間區域的內容可以居中 */
     align-items: center; /* 垂直居中 */
@@ -29,7 +29,7 @@ body{
 }
 
 .highlight {
-    border: 3px solid red; /* 設置邊框顏色和粗細 */
+    border: 2px solid red; /* 設置邊框顏色和粗細 */
     animation: blink 1s infinite; /* 設置閃爍動畫 */
 }
 
@@ -40,13 +40,13 @@ body{
 }
 
 
-#die{
+/* #die{
     border: 1px solid black;
     width: 10vw;
     height: 10vw;
     box-sizing: border-box;
     
-}
+} */
 
 
 /* map area */
@@ -84,6 +84,7 @@ body{
 
     width: 8vh;
     height: 16vh; 
+    /* height: 8vh;  */
     
 }
 
@@ -91,6 +92,7 @@ body{
 #right-section .square{
 
     width: 16vh;
+    /* width: 8vh; */
     height: 8vh; 
     
 }
@@ -101,6 +103,8 @@ body{
 #square28 {
     width: 16vh !important;
     height: 16vh !important; 
+    /* width: 8vh !important;
+    height: 8vh !important;  */
 } 
 
 
@@ -117,8 +121,7 @@ body{
 }
 
 #numInput{
-    padding: 10px;
-    margin-right: 10px;
+    padding: 2vh;
 }
 
 
