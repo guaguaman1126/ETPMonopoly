@@ -39,7 +39,7 @@ selectToken(token1);//預設token1開始
 
 //輸入骰子call行走
 document.getElementById('numInput').addEventListener('keydown', function(event) {
-    if (event.key === 'Enter' && moving === false) {
+    if (event.key === 'Enter' && moving === false && this.value) {
         let number = this.value;
         if (0 <= number && number<= 6) {
             index = number; // 將數字賦值給 index
@@ -47,7 +47,8 @@ document.getElementById('numInput').addEventListener('keydown', function(event) 
             movePieceToNextSquare(index);
             this.value = null;
         }else{
-            alert("Valid number Please");
+        alert("Valid number Please");
+        this.value = null;
         }
     }
 });
@@ -60,6 +61,9 @@ document.getElementById('numInput').addEventListener('keydown', function(event) 
 
 //獲得移動權
 function selectToken(token) {
+    const numInput = document.getElementById('numInput');
+    const num = token.id.match(/\d$/);
+
     if (selectedToken) {
         selectedToken.classList.remove('highlight');
     }
@@ -67,6 +71,11 @@ function selectToken(token) {
     // 設置新的選擇的 token
     selectedToken = token;
     selectedToken.classList.add('highlight');
+    if(token.id === token1){
+
+    }
+    numInput.placeholder = `Bus${num}'s turn`; 
+
 }
 
 // 移動換骰

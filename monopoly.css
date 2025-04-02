@@ -17,22 +17,21 @@ body{
 }
 
 .token{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 5vh;
     height: 5vh;
     background-color: #ffffffac;
     display: flex; /* 讓中間區域的內容可以居中 */
     align-items: center; /* 垂直居中 */
     justify-content: center; /* 水平居中 */
-    box-sizing:border-box;
-    background-image: url('圖檔/bus.png');
+    box-sizing:content-box;
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 
 .highlight {
-    border: 1px solid red; /* 設置邊框顏色和粗細 */
+    border: 2px solid red; /* 設置邊框顏色和粗細 */
     animation: blink 1s infinite; /* 設置閃爍動畫 */
 }
 
@@ -72,31 +71,53 @@ body{
 
 .square{
     border: 1px solid black;
-    text-align: center;
-    vertical-align: middle;
-    background-color: lightblue;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 1vh;
 }
 
-#top-section .square,
+#top-section .square{
+
+    width: 8vh;
+    height: 16vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center
+}
+
 #bottom-section .square{
 
     width: 8vh;
-    height: 16vh; 
-    /* height: 8vh;  */
+    height: 16vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center
     
 }
 
-#left-section .square,
+#left-section .square{
+
+    width: 16vh;
+    height: 8vh; 
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
 #right-section .square{
 
     width: 16vh;
-    /* width: 8vh; */
-    height: 8vh; 
+    height: 8vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
     
 }
 
@@ -106,9 +127,20 @@ body{
 #square28 {
     width: 16vh !important;
     height: 16vh !important; 
-    /* width: 8vh !important;
-    height: 8vh !important;  */
 } 
+
+#square1,#square10,#square19{
+    display: flex !important; 
+    flex-wrap: nowrap !important; 
+    flex-direction: row !important; 
+    align-items: flex-end !important; 
+    justify-content: center !important; 
+}
+
+#square28{
+
+}
+
 
 
 
@@ -152,17 +184,14 @@ body{
 
 #token1{
     background-image: url('圖檔/bus1.png');
-    background-size: cover;
 }
 
 #token2{
     background-image: url('圖檔/bus2.png');
-    background-size: cover;
 }
 
 #token3{
     background-image: url('圖檔/bus3.png');
-    background-size: cover;
 }
 
 
