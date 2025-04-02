@@ -41,12 +41,12 @@ selectToken(token1);//預設token1開始
 document.getElementById('numInput').addEventListener('keydown', function(event) {
     if (event.key === 'Enter' && moving === false) {
         let number = this.value;
-        if (1 <= number && number<= 6) {
+        if (0 <= number && number<= 6) {
             index = number; // 將數字賦值給 index
             moving = true;
             movePieceToNextSquare(index);
             this.value = null;
-        } else {
+        }else{
             alert("Valid number Please");
         }
     }
@@ -76,8 +76,21 @@ function movePieceToNextSquare(index) {
     const parentElement = childElement.parentElement;
     const parentId = parentElement.id;
     const parentNumber = parseInt(parentId.replace('square', ''));
-    
-    for(let i = 1 ; i <= index ; i++){
+
+    if(index == 0){
+
+        if(selectedToken === token1){
+            selectToken(token2);
+        }else if(selectedToken === token2){
+            selectToken(token3);
+        }else if(selectedToken === token3){
+            selectToken(token1);
+        }
+        moving = false;
+
+        return; // 結束函數
+    }else{
+        for(let i = 1 ; i <= index ; i++){
         setTimeout(()=>{
             const newIndex = (parentNumber + i - 1) % 36 + 1; 
             const targetParentId = `square${newIndex}`;
@@ -103,6 +116,9 @@ function movePieceToNextSquare(index) {
             }
         },200*i);
     }
+    }
+
+    
 }
 
 
