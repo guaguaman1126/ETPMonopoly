@@ -1,6 +1,9 @@
 body{
+    height: 100vh;
     display: flex;
     border: 2px solid #000000;
+    justify-content: center;
+    align-items: center;
 }
 [draggable="true"] {
     /*
@@ -20,7 +23,7 @@ body{
     display: flex; /* 讓中間區域的內容可以居中 */
     align-items: center; /* 垂直居中 */
     justify-content: center; /* 水平居中 */
-    box-sizing:content-box;
+    box-sizing:c-box;
     background-size: cover;
     background-repeat: no-repeat;
 
