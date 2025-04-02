@@ -104,4 +104,16 @@ function movePieceToNextSquare(index) {
         },200*i);
     }
 }
-       
+
+
+// 放圖片
+const N = 36; // 你可以根據需要更改這個值
+
+for (let i = 1; i <= N; i++) {
+    const square = document.getElementById(`square${i}`);
+    if (square) {
+        square.style.backgroundImage = `url('圖檔/${i}.jpg')`;
+        square.style.backgroundSize = 'cover';
+        
+    }
+}
