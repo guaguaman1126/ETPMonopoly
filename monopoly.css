@@ -118,11 +118,25 @@ body{
     align-items: center; /* 垂直居中 */
     justify-content: center; /* 水平居中 */
     box-sizing: border-box;
+
+    position:relative;
 }
 
 #numInput{
     padding: 2vh;
 }
 
+#middleArea{
+    background-image: url('圖檔/0.jpg');
+    background-size: cover;
+}
+
+#numInput{
+    position:absolute;
+    top: 68%;
+    bottom: 25%;
+    right: 10%;
+    left: 55%;
+}
 
 
