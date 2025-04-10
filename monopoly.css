@@ -1,5 +1,6 @@
 body{
     height: 100vh;
+    width: 100vw;
     display: flex;
     border: 2px solid #000000;
     justify-content: center;
@@ -26,6 +27,9 @@ body{
     box-sizing:c-box;
     background-size: cover;
     background-repeat: no-repeat;
+    border: 2px solid rgb(0, 0, 0); /* 設置邊框顏色和粗細 */
+    border-radius: 5px;
+    
 
 }
 
